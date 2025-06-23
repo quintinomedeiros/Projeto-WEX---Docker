@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Projeto Apache no Docker</title>
+        <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #d23669;
+    }
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      border-left: 4px solid #d23669;
+      overflow-x: auto;
+    }
+    code {
+      font-family: monospace;
+    }
+    ul {
+      margin-left: 20px;
+    }
+  </style>
+    </head>
+    <body>
+        <h1>🚀 Projeto Apache com Docker Compose</h1>
+
+        <p>Este projeto demonstra como configurar e executar um servidor <strong>Apache
+                HTTP (httpd)</strong> utilizando <strong>Docker Compose</strong>.
+            Ele serve uma página web simples escrita em HTML e descreve todo o
+            processo de forma educativa.</p>
+
+        <h2>📦 Estrutura do Projeto</h2>
+        <pre><code>meu-apache-projeto/
+├── docker-compose.yml
+└── site/
+    └── index.html</code></pre>
+
+        <h2>🔧 Arquivo <code>docker-compose.yml</code></h2>
+        <p>Este arquivo define os serviços do Docker Compose. Ele utiliza a
+            imagem oficial do Apache (httpd) e monta a pasta <code>site</code>
+            como volume, servindo seu conteúdo via porta 8080.</p>
+
+        <pre><code>version: '3.8'
+
+services:
+  web:
+    image: httpd:2.4
+    ports:
+      - "8080:80"
+    volumes:
+      - ./site:/usr/local/apache2/htdocs/</code></pre>
+
+        <h2>🧪 Como Executar</h2>
+        <p>No terminal, dentro da pasta do projeto:</p>
+        <pre><code>docker compose up</code></pre>
+        <p>Depois, abra seu navegador e acesse:</p>
+        <pre><code>http://localhost:8080</code></pre>
+
+        <h2>📁 Arquivo HTML exibido</h2>
+        <p>Este próprio arquivo <code>index.html</code> é o que está sendo
+            servido via Apache dentro do container Docker.</p>
+
+        <h2>🌐 Repositório no GitHub</h2>
+        <p>Você pode subir este projeto para um repositório no GitHub com os
+            seguintes comandos:</p>
+        <pre><code>git init
+git remote add origin https://github.com/seu-usuario/meu-apache-docker.git
+git add .
+git commit -m "Subindo projeto Apache com Docker"
+git branch -M main
+git push -u origin main</code></pre>
+
+        <h2>✅ Objetivos Atendidos</h2>
+        <ul>
+            <li>Criar um arquivo <code>docker-compose.yml</code> com o Apache
+                (httpd)</li>
+            <li>Definir volume com HTML simples (Hello World)</li>
+            <li>Executar a aplicação com Docker Compose</li>
+            <li>Subir tudo para o GitHub</li>
+        </ul>
+
+        <h2>💡 Observações</h2>
+        <p>Esse projeto é ideal para iniciantes em Docker e Compose. Ele mostra
+            na prática como containerizar um servidor web e organizar uma
+            aplicação de forma modular.</p>
+
+        <hr>
+        <p style="text-align:center;">Criado com ❤️ por Quintino Medeiros</p>
+    </body>
+</html>
