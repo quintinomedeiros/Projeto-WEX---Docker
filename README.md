@@ -20,10 +20,12 @@ Este projeto demonstra como configurar e executar um servidor **Apache HTTP (htt
 ## 📦 Estrutura do Projeto
 
 meu-apache-projeto/
-├── docker-compose.yml
-└── site/
-└── index.html
 
+├── docker-compose.yml
+
+└── site/
+
+└── index.html
 
 ---
 
