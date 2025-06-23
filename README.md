@@ -25,7 +25,7 @@ meu-apache-projeto/
 
 └── site/
 
-└── index.html
+└──└── index.html
 
 ---
 
