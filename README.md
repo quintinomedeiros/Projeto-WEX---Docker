@@ -43,13 +43,14 @@ services:
       - "8080:80"
     volumes:
       - ./site:/usr/local/apache2/htdocs/
-🧪 Como Executar o Projeto
+
+## 🧪 Como Executar o Projeto
 No terminal, dentro da pasta do projeto:
 
-bash
-Copiar
-Editar
+```bash
 docker compose up
+```
+
 Depois, acesse no navegador:
 
 ```bash
